@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>iiot_data_secure</name>
+  <version>0.0.1</version>
+  <description>iiot_data_secure package</description>
+
+  <maintainer email="alisher@aira.life">Alisher A. Khassanov</maintainer>
+
+  <license>BSD3</license>
+  <url type="website">https://airalab.org/</url>
+
+  <author email="sas@aira.life">Alexandr Starostin</author>
+  <author email="alisher@aira.life">Alisher A. Khassanov</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>message_generation</build_depend>
+  <build_depend>rospy</build_depend>
+
+  <build_export_depend>message_generation</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+
+  <exec_depend>rosbridge_server</exec_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>rospy</exec_depend>
+
+  <export>
+  </export>
+</package>
