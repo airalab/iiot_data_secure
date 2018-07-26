@@ -1,0 +1,12 @@
+<launch>
+  <arg name="server_address" default="https://192.168.11.19:8011" />
+  <arg name="certfile" default="/etc/ssl/devjs-01.corp.aira.life/devjs-01.corp.aira.life.cer" />
+  <arg name="keyfile" default="/etc/ssl/devjs-01.corp.aira.life/devjs-01.corp.aira.life.key" />
+
+  <node name="webserver" pkg="iiot_data_secure" type="server_node" output="screen">
+    <param name="server_address" value="$(arg server_address)" />
+    <param name="certfile" value="$(arg certfile)" /> <!-- SSL certificate for webserver -->
+    <param name="keyfile" value="$(arg keyfile)" />
+    <param name="sensors_namespace" value="/input/" />
+  </node>
+</launch>

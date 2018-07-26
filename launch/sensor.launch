@@ -1,0 +1,12 @@
+<launch>
+  <arg name="sensor_name" default="sensor_1" />
+
+  <param name="sensor_name" value="$(arg sensor_name)" />
+  <group ns="input">
+    <node name="$(arg sensor_name)" pkg="iiot_data_secure" type="sensor_node" output="screen" />
+    <!-- rosbridge required for sensor_signer node -->
+    <node name="$(arg sensor_name)_signer" pkg="iiot_data_secure" type="signer" output="screen">
+      <param name="sensor_name" value="$(arg sensor_name)" />
+    </node>
+  </group>
+</launch>

@@ -1,0 +1,19 @@
+<launch>
+
+  <!-- Three sensors names for simulation -->
+  <arg name="sensor_1" default="sensor_1" />
+  <arg name="sensor_2" default="sensor_2" />
+  <arg name="sensor_3" default="sensor_3" />
+  
+  <!-- Simulation -->
+  <include file="$(find iiot_data_secure)/launch/sensor.launch">
+    <arg name="sensor_name" value="$(arg sensor_1)" />
+  </include>
+  <include file="$(find iiot_data_secure)/launch/sensor.launch">
+    <arg name="sensor_name" value="$(arg sensor_2)" />
+  </include>
+  <include file="$(find iiot_data_secure)/launch/sensor.launch">
+    <arg name="sensor_name" value="$(arg sensor_3)" />
+  </include>
+
+</launch>

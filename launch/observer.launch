@@ -1,0 +1,13 @@
+<launch>
+  <arg name="ipfs_http_provider" default="http://127.0.0.1:5001" />
+  <arg name="journals_dir" default="$(find iiot_data_secure)/storage" />
+  <arg name="sensors_namespace" default="/input/" />
+  <arg name="observing_topic" default="signed" />
+
+  <node name="observer" pkg="iiot_data_secure" type="journal_node" output="screen">
+    <param name="ipfs_http_provider" value="$(arg ipfs_http_provider)" />
+    <param name="journals_dir" value="$(arg journals_dir)" />
+    <param name="sensors_namespace" value="$(arg sensors_namespace)" />
+    <param name="observing_topic" value="$(arg observing_topic)" />
+  </node>
+</launch>
